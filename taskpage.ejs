@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>My Tasks</title>
+	</head>
+
+	<body>
+		<!-- Change the action url? -->
+		<form name="addtask" action="/tasks/create" method="post">
+			<h2>Add a new Task!</h2>
+			<input type="text" name="newtaskname" value="task name:">
+			Rating: <input type="number" name="rating" value="rating:">
+			Min Duration (minutes): <input type="number" name="durationmin">
+			Max Duration (minutes): <input type="number" name="durationmax">
+			Mood: <input type="text" name="mood">
+			<p> etc... </p>
+			<br>
+			<input type = "submit" name="submit" value="create">
+		</form>
+
+		<!-- Change the action url? -->
+		<form name= "edittask" action="/tasks/edit" method="post">
+			<h2>Edit a Task!</h2>			
+			<input type="text" name="editTaskName" value="enter existing task name:">
+			Rating: <input type="number" name="editRating">
+			Min Duration: <input type="number" name="editMinDuration">
+			Max Duration: <input type="number" name="editMaxDuration">
+			Mood: <input type="text" name="editMood">
+			<p>etc...</p>
+			<br>
+			<input type="submit" name="submit" value="edit">
+		</form>
+
+
+		<!-- Display all your tasks here? -->
+		<h1>My Tasks</h1>
+
+		<ol>
+			<% for(var i=0; i<tasklist.length; i++) { %>
+				<li> <%= tasklist[i] %>: rating=<%= ratinglist[i] %>, duration=<%= durationlist[i] %>, mood=<%=moodlist[i]%> </li>
+			<% } %>
+		</ol>
+		
+		<br>
+		<br>
+		<a href="http://localhost:8000/home">Home</a>
+		<br>
+		<p><strong>TASK PAGE</strong></p>
+		<br>
+		<a href='http://localhost:8000/recommender'>Task Recommender</a>
+		<br>
+		<a href='http://localhost:8000/history'>Task History</a>
+		<br>
+		<a href="http://localhost:8000/logout">Log out</a>
+	</body>
+
+</html>
