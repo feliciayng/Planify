@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!-- this page will display recommendations for the user -->
+<!-- inherit listAll, rateAll, listMe, rateMe -->
+
+<html>
+    <head>
+        <title>Try these tasks!</title>
+    </head>
+
+    <body>
+
+        <h1>Recommendations from your friends:</h1>
+        <ol>
+            <% for (var i=0; i<listAll.length; i++) { %>
+                <li> <%= listAll[i] %> rating=<%= rateAll[i] %> </li>
+            <% } %>
+        </ol>
+
+        <h1>Your favorite tasks:</h1>
+        <ol>
+            <% for (var i=0; i<listMe.length; i++) { %>
+                <li> <%= listMe[i] %> rating=<%= rateMe[i] %> </li>
+            <% } %>
+        </ol>
+
+        <br>
+        <a href="http://localhost:8000/home">Home</a>
+        <br>
+        <p><strong>TASK PAGE</strong></p>
+        <br>
+        <a href='http://localhost:8000/recommender'>Task Recommender</a>
+        <br>
+        <a href='http://localhost:8000/history'>Task History</a>
+        <br>
+        <a href="http://localhost:8000/logout">Log out</a>
+
+    </body>
+
+</html>
