@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+
+<html>
+
+<!-- THIS FORM TAKES USER INPUT ABOUT MOOD & TIME CONSTRAINT -->
+
+    <head>
+        <title>Our recommendations</title>
+    </head>
+
+    <body>
+        <form name="recommondForm" action="/recommended" method="post">
+            <p>What kind of mood are you in? (for example, productive)</p>
+            <input type="text" name="userMood">
+            <p></p>
+            <p>About how much time do you have? (in minutes)</p>
+            <input type="number" name="userTime">
+            <!-- The button below submits the entered user data -->
+            <input type="submit" name="submit" value="Submit"/>
+        </form>
+    </body>
+
+</html>
