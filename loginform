@@ -9,7 +9,8 @@
     
         <!-- Upon clicking the login or signup buttons, these JS functions will send username/password data to "appdz" -->
         <script type="text/javascript">
-            /*
+            
+            /* //////////////////////////////////////////////////////// THIS CODE IS NOT YET IN USE!
             function Myfunction() {
                 console.log( $('input[name="username"]').val() );
                 $.ajax({
@@ -50,7 +51,7 @@
                 })
             }
             
-            */
+            ///////////////////////////////////////////////////END UNUSED CODE */
         </script>
     
 
